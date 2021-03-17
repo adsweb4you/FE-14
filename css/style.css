@@ -1,0 +1,254 @@
+ 
+ @font-face{
+     font-family: alks;
+     src: url('../fonts/alk-sanet-webfont.woff');
+ }
+
+ *{
+     box-sizing: border-box;
+ }
+ 
+ .container{
+     width: 1100px;
+     margin: auto;
+     max-width: 100%;
+ }
+
+ .row{
+     width: 100%;
+     display: flex;
+     flex-wrap: wrap;
+ }
+
+ .col-4{
+     width: 25%;
+     padding: 0 15px;
+ }
+
+ .cards{
+     padding: 7px;
+     border-radius: 12px;
+     box-shadow: 3px 3px 3px #ccc;
+ }
+
+ .cards img{
+  max-width: 100%;
+  display: block;
+  margin: auto;
+ }
+
+ body{
+     margin: 0;
+ }
+
+ ul{
+    margin-block-start: 0;
+    margin-block-end: 0;
+ }
+
+ nav ul {
+     margin-left: auto;
+    display: inline-flex;
+    list-style: none;
+ }
+
+ nav ul li{
+   position: relative;
+   padding: 1rem 0;
+}
+ 
+ .dropdown{
+    position: absolute;
+    background: darkslategrey;
+    width: 0px;
+    opacity: 0;
+    z-index: -1;
+    left: -100%;
+    transition: all .6s;
+    border-radius: 3px;
+    box-shadow: 3px 3px 3px #0502021c;
+    top: 33px;
+}
+
+nav ul li:hover  .dropdown{
+    opacity: 1;
+    z-index: 1;
+    left: 0;  
+    width:193px;
+    top: 48px;
+}
+.dropdown a {
+    display: block;
+    padding: 10px 14px;
+    transition: all .6s;
+}
+
+.dropdown a:hover {
+    background: rgb(25, 44, 44);
+}
+ 
+ 
+ nav ul li a{
+ color: #fff;
+ padding: 7px;
+ font-family: alks;
+ }
+
+ a{
+     text-decoration: none;
+ }
+ .cards-body{
+    font-family: alks;
+     text-align: center;
+ }
+
+
+ nav{
+     background-color: darkslategray;
+ }
+
+ @media (max-width:1000px){
+ 
+    .col-4{
+        width: 33.3333%;
+        padding: 0 15px;
+    }
+
+
+ }
+
+ @media (max-width:600px){
+ 
+    .col-4{
+        width: 50%;
+        padding: 0 15px;
+    }
+
+    nav ul {
+        margin-left: auto;
+        display: block;
+        list-style: none;
+        margin: auto;
+        text-align: center;
+    }
+
+    nav ul li a{
+        margin-bottom: 7px;
+        display: block;
+    }
+ }
+
+ @media (max-width:400px){
+ 
+    .col-4{
+        width: 100%;
+        padding: 0 15px;
+    }
+ }
+
+ /* @media  (max-width:1500px) and (min-width:600px){
+     body{
+         background-color: black;
+     }
+ } */
+
+ @media  print  and (max-width:1000px){
+   .row{
+       flex-wrap: nowrap;
+   }
+ }
+ 
+
+ /* ტრანსფორმაციები */
+ 
+
+ .col-4:first-child .cards{
+    transform: matrix(1, 0, -1, 1, 0, -1);
+ 
+ }
+
+ 
+ 
+ .col-4 .cards{
+    position: relative;
+   }
+ 
+ .cards-body h4{
+     overflow: hidden;
+     height: 31px;
+     top: 0;
+     transition: all .6s;
+ }
+ 
+
+ 
+ .overs{
+    background-color: chartreuse;
+    height: 200px;
+    overflow: hidden;
+    animation-name: changebacground;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+   animation-delay: 2s;
+    animation-fill-mode:backwards;
+    animation-direction: alternate;
+    animation-iteration-count: 5;
+}
+
+
+@keyframes changebacground {
+  
+    0%{background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(255,0,0,1) 50%);}
+    20%{ background: linear-gradient(90deg, rgba(116,84,138,1) 0%, rgba(203,42,42,1) 50%);}
+    40%{ background: linear-gradient(90deg, rgb(37, 28, 42) 0%, rgb(128, 80, 80) 50%);}
+    70%{ background: linear-gradient(90deg, rgb(80, 20, 121) 0%, rgb(49, 40, 40) 50%);}
+    100%{ background: linear-gradient(90deg, rgb(37, 28, 43) 0%, rgb(216, 6, 6) 50%);}
+ }
+
+ .centers{
+     padding-top: 150px;
+     padding-bottom: 150px;
+     margin: auto;
+     width: 33.333%;
+     text-align: center;
+ }
+
+ .centers svg{
+    width: 100px;
+    height: 100px;
+    animation-name: heart;
+    animation-duration: .6s;
+    
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+ }
+
+ @keyframes heart{
+     0%{transform: scale(.5);  color: red;}
+     100%{transform: scale(1.2);  color: #000;}
+ }
+
+ .scrolflex{
+    display: flex;
+    width: 15.8%;
+    margin: auto;
+    margin-top: 20px;
+    overflow-x: scroll
+ }
+
+ .scrolflex .col-5{
+  width: 180px;
+  height: 180px;
+  background-color: brown;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .col-5 p{
+    display: block;
+    width: 250px;
+    text-align: center;
+ }
