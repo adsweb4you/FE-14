@@ -25,7 +25,7 @@ let nan = NaN;
 //document.getElementById("test").innerText = y;
 //document.getElementById("test").innerHTML = x * z ;
 
-console.log();
+ 
  
 
 let src = 'img/slider.png';
@@ -83,4 +83,56 @@ let str = "მე   ვარ  it   step   სტუდენტი  step    ს
 
 let ss = window.location.pathname;
 
-console.log(str[5])
+ 
+
+let b = 2.800;
+let c = 3.65;
+
+let xs = Number(b) * Number(c);
+
+let cs2 = xs.toFixed(3);
+
+ 
+
+let User = {
+    name:"ადმინი",
+    email:"admin@gmail.com",
+    role:"admin",
+    age:55,
+    adrees:{addr:"მისამართი1", addr2:"მისამართი2"},
+    candelate: function(){
+       if(this.age > 18){
+           console.log("ჭეშმარიტია");
+       }else{
+          console.log("მცდარია");
+       }
+    }
+}
+
+
+document.getElementById("test").innerHTML  = User.email;
+
+  //User.adrees.addr;
+ 
+User.candelate();
+
+function changename(l = 10, t){
+ let test =  l * t;
+let ss = "sadas";
+ 
+
+}
+
+console.log(changename(25, 6));
+
+console.log(changename(80, 100));
+
+
+function par(bc = 45){
+    return bc;
+}
+
+let ps = par(100);
+
+console.log(ps);
+
