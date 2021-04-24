@@ -134,5 +134,4 @@ function par(bc = 45){
 
 let ps = par(100);
 
-console.log(ps);
-
+ 
