@@ -149,3 +149,7 @@ function outstudents(studen){
 
 
  
+
+let d = new Date();
+ 
+ console.log(d)
