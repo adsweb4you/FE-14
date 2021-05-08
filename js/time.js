@@ -104,7 +104,7 @@ pits.innerHTML += htmls;
 Blogs.forEach(blogview);
 
 
-let animals = document.querySelectorAll("h1:not(.dogs)");
+let animals = document.querySelectorAll("h1");
 
 
 //let animals = document.querySelectorAll("h1:not(.dogs)"); css სელექტორი მასივი სახით 
@@ -115,7 +115,10 @@ let animals = document.querySelectorAll("h1:not(.dogs)");
 
  
 
-for (let i = 0; i < animals.length; i++) {
+
+
+function changetext(){
+  for (let i = 0; i < animals.length; i++) {
   const element = animals[i];
   
   if(element.innerText.search("S") != -1){
@@ -124,4 +127,30 @@ for (let i = 0; i < animals.length; i++) {
   }else{
     element.innerText += " გარეული ცხოველია" 
   }
+}
+}
+
+function reloads(){
+  for (let i = 0; i < animals.length; i++) {
+  const element = animals[i];
+  
+ 
+      element.innerText = element.innerText.replace("შინაური ცხოველია", "");
+      element.innerText = element.innerText.replace("გარეული ცხოველია", "");
+ 
+}
+}
+
+ 
+let input  = document.getElementById("values");
+
+function icnr(){
+  input.value++;
+}
+
+function decr(){
+  if (input.value >= 2) {
+      input.value--;
+  }
+
 }

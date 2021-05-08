@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
     
@@ -31,6 +32,17 @@
     <h1 class="dogs">ვეფხვი</h1>
     <h1 class="animal">მგელი</h1>
 
+    <button class="btn btn-success" onclick="changetext()">ტექსტის მინიჭება</button>
+    <button class="btn btn-danger" onclick="reloads()">ტექსტის უკან დაბრუნება</button>
+
+
+  <div class="col-md-2 mx-auto p-5 shadow rounded">
+ <form action="" class="d-flex counter"> 
+    <button onclick="decr()" type="button" class="btn">-</button>
+    <input type="text" value="0" id="values" class="form-control border-0 text-center">
+    <button onclick="icnr()" type="button" class="btn">+</button>
+</form>
+  </div>
 
     <script src="js/time.js"></script>
 </body>

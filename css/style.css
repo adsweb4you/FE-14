@@ -192,3 +192,15 @@ a, a:hover{
   display: none;
 }
 }
+
+
+.counter{
+  border: 1px solid #e4ecff;
+  padding: 3px;
+  border-radius: 40px;
+}
+
+button:focus{
+  outline: none !important;
+  box-shadow: none !important;
+}
