@@ -154,3 +154,18 @@ function decr(){
   }
 
 }
+
+let anime = document.querySelector('#anime')
+
+// function change(){
+//   body.classList.add("darkmode")
+// }
+
+
+// function change(){
+//   body.classList.remove("darkmode")
+// }
+
+// function change(){
+//   anime.classList.toggle("anime")
+// }

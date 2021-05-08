@@ -204,3 +204,20 @@ button:focus{
   outline: none !important;
   box-shadow: none !important;
 }
+
+body.darkmode{
+  background-color: #000 !important;
+}
+
+.anime{
+ animation-name: shake;
+ animation-duration: .2s;
+ animation-iteration-count: 4;
+ /* animation-delay:  1s; */
+
+}
+
+@keyframes shake {
+  0%{border: 1px solid transparent; transform: scale(1);}
+  100%{border: 1px solid red; transform: scale(1.2);}
+}
