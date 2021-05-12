@@ -5,40 +5,89 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href=" css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <style>
+       form{
+           margin-top: 20%;
+        }  
+
+        .search{
+         border-radius: 50px;
+         background-color: crimson;
+         color: white;
+         width: 50px;
+         height: 50px;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         box-shadow: 1px 1px 2px #0000007d;
+         transform: translate(-50%, -50%);
+         transition: all .6s;
+        }
+
+        .search.show{
+          left: 52%;
+          transform: translate(0, -50%);
+          transition: all 1s;
+          background-color: darkslategrey;
+        }
+
+        input::placeholder{
+            color: white;
+        }
+
+        input{
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        width: 0;
+        top: 50%;
+        left: 18%;
+        transform: translate(-50%, -50%);
+        background-color: #dc143c;
+        border: navajowhite;
+        color: white;
+        padding: 7px;
+        border-radius: 50px;
+         transition: all .6s;
+        box-shadow: -10px -1px 18px #dc143c;
+ 
+        }
+
+        input.show{
+        opacity:1;
+         transition: all .6s;
+        pointer-events: all;
+        width: 100%;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-dark">
 
+ <!-- <form action="" class="col-md-4 mx-auto   ">
+
+    <p id="output"></p>
+
+     <label for="val1"></label>
+     <input type="text" class="form-control" placeholder="სიგრძე" id="val1" data-id="1">
+     <label for="val2"></label>
+     <input type="text" class="form-control" placeholder="სიგანე" id="val2" data-id="2">
+     <label for="val3"></label>
+     <input type="text" class="form-control mb-3" placeholder="სიმაღლე" id="val3" data-id="3">
+
+     <button type="button" class="btn btn-success" onclick="calc()">დაანგარიშება</button>
+ </form>
+
+ <img src="img/dog.png" alt="" class="imgs">
+ <button class="btn btn-primary changimg" >სურათის შეცვლა</button> -->
  
-
-    <div id="test"></div>
-    <div id="car"></div>
-
-   <div id="card"></div>
-    
-
-   <div id="foreach">
-
-   </div>
-
-
-   <div class="container">
-
-    <div class="mb-3">
-       
-        <input type="text" class="form-control" id="search" >
- 
-      </div>
-
-    <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="stipend">
-        <label class="form-check-label" for="stipend">მხოლოდ სტიპენდიანტები</label>
-      </div>
-
-       <div class="row" id="students">
-
-       </div>
-   </div>
+ <form action="" class="d-flex col-md-2 mx-auto position-relative">
+     <input type="text" name="" id="" placeholder="ძებნა">
+     <button type="button" class="btn search">
+        <span class="icons"><i class="bi bi-search"></i></span> 
+        </button>
+ </form>
     
     <script src="js/dom.js"></script>
 </body>
