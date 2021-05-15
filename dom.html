@@ -8,7 +8,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <style>
-       form{
+       /* form{
            margin-top: 20%;
         }  
 
@@ -38,8 +38,7 @@
         }
 
         input{
-        opacity: 0;
-        pointer-events: none;
+ 
         position: absolute;
         width: 0;
         top: 50%;
@@ -60,7 +59,47 @@
          transition: all .6s;
         pointer-events: all;
         width: 100%;
+        } */
+
+        form:nth-child(1){
+            left: 0;
+            transition: all .6s;
         }
+
+        form:nth-child(2){
+            right: 0;
+            transition: all .6s;
+        }
+
+        form{
+            transition: all .6s;
+        }
+
+        form.right{
+        left: 54%;
+        transition:all 0.6s;
+        }
+
+        form.left{
+        right: 54%;
+        transition:all 0.6s;
+        }
+
+       p{
+         position: relative;
+         opacity: .6;
+         transition: all 0.6s;
+         transform: translateX(-100%);
+       }
+
+        p.active{
+          color:red;
+          transition: all 0.6s;
+          opacity: 1;
+          transform: translateX(0);
+        }
+        
+
     </style>
 </head>
 <body class="bg-dark">
@@ -82,13 +121,65 @@
  <img src="img/dog.png" alt="" class="imgs">
  <button class="btn btn-primary changimg" >სურათის შეცვლა</button> -->
  
- <form action="" class="d-flex col-md-2 mx-auto position-relative">
+ <!-- <form action="" class="d-flex col-md-2 mx-auto position-relative">
      <input type="text" name="" id="" placeholder="ძებნა">
      <button type="button" class="btn search">
         <span class="icons"><i class="bi bi-search"></i></span> 
         </button>
- </form>
+ </form> -->
     
+
+ <!-- <div class="container">
+     <div class="row position-relative">
+        
+       <form class="w-50 position-absolute"> 
+         <div class="mb-3 ">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <button type="button" class="btn btn-success">login</button>
+        </form> 
+ 
+
+       
+       <form class="w-50 position-absolute  bg-danger" > 
+        <div class="mb-3 ">
+           <label for="exampleFormControlInput1" class="form-label">Email address</label>
+           <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+         </div>
+         <div class="mb-3">
+           <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+         </div>
+         <button type="button" class="btn btn-primary">Register</button>
+       </form> 
+         
+
+     </div>
+ </div>
+
+ <button class="btn btn-warning">ველიდ დამატება</button>
+
+<div id="out">
+    
+</div>
+  -->
+<div class="parrent">
+  <p class="active">sdfdsfsdfsd</p>
+  <p>ზედა მეზობელი</p>
+  <p>sdfdsfsdfsd</p>
+  <p>ქვედა მეზობელი</p>
+  <p>sdfdsfsdfsd</p>
+  <p>sdfdsfsdfsd</p>
+  <p>sdfdsfsdfsd</p>
+</div>
+
+<button class="btn btn-danger">შემდეგი ელემენტი</button>
+
     <script src="js/dom.js"></script>
 </body>
 </html>

@@ -1,11 +1,2 @@
-1) უნდა შევქმნათ ფორმა რომელიც გამოითვლის საბოლოო ფასს შემდეგი პარამეტრების მიხედვით
-
-  -- სიგრძე (input)
-  -- სიგანე (input)
-  -- სიმაღლე  (input)
-
-  --დაანგარიშება ( button  + onclick="function()" )
-    
-მოცემულ კუბური ზომა  უნდა გამრავლდეს  კონკრეტულ ფასსე და გამოანგარიშდეს საბოლოო ღირებულება,
-
-მოცემული კალკულაცია უნდა გამოვიტანოთ HTML ში 
+1) https://i0.wp.com/codemyui.com/wp-content/uploads/2017/03/sidebar-menu.gif?fit=880%2C440&ssl=1
+2) https://freefrontend.com/assets/img/css-search-boxes/Search-Bar.gif

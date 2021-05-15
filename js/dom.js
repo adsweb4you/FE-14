@@ -202,20 +202,91 @@
  
  
 
-let mybtn = document.querySelector(".search");
-let input = document.querySelector("input");
-let icons = document.querySelector(".icons");
-mybtn.addEventListener("click", function(){
+// let mybtn = document.querySelector(".search");
+// let input = document.querySelector("input");
+// let icons = document.querySelector(".icons");
+// mybtn.addEventListener("click", function(){
 
- this.classList.toggle("show");
- input.classList.toggle("show");
+//  this.classList.toggle("show");
+//  input.classList.toggle("show");
 
- if (icons.innerHTML == '<i class="bi bi-x-lg"></i>') {
-   icons.innerHTML = '<i class="bi bi-search"></i>';  
- }else{
-   icons.innerHTML = '<i class="bi bi-x-lg"></i>';  
+//  if (icons.innerHTML == '<i class="bi bi-x-lg"></i>') {
+//    icons.innerHTML = '<i class="bi bi-search"></i>';  
+//  }else{
+//    icons.innerHTML = '<i class="bi bi-x-lg"></i>';  
+//  }
+
+
+
+// })
+
+// let form = document.querySelectorAll("form");
+
+ 
+// let registerbtn  = document.querySelector(".btn-primary");
+// let logbtn  = document.querySelector(".btn-success");
+// registerbtn.addEventListener("click", function(){
+
+//   form[0].classList.add("right");
+//   form[1].classList.add("left");
+// })
+
+
+// logbtn.addEventListener("click", function(){
+
+//   form[0].classList.remove("right");
+//   form[1].classList.remove("left");
+// })
+
+
+// let img  = document.createElement("img");
+// let h1  = document.createElement("h1");
+// img.setAttribute('src', 'img/slider.png');
+// img.setAttribute('alt', 'შექმნილი იმიჯი');
+// img.classList.add("img-fluid");
+
+// h1.textContent = "საცდელი ტექსტი";
+
+// let htmsl = document.getElementById("out");
+
+//  htmsl.appendChild(img);
+ 
+//  htmsl.appendChild(h1);
+
+
+//  let newinput = document.querySelector(".btn-warning");
+
+//  newinput.addEventListener("click", function(){
+//  let input = document.createElement("input");
+//  let div = document.createElement("div");
+//  div.classList.add("form-group");
+//  input.classList.add("form-control");
+//  input.setAttribute('type', 'number'); 
+
+//  div.appendChild(input)
+
+//  htmsl.appendChild(div);
+
+//  })
+
+ 
+   let btn = document.querySelector('.btn-danger');
+   let p = document.querySelectorAll('p');
+btn.addEventListener("click", function(){
+
+
+  let active = document.querySelectorAll(".active");   
+  if(active[0].nextElementSibling != null){
+  active[0].classList.remove("active");
+  active[0].nextElementSibling.classList.add("active")
+  }else{
+  active[0].classList.remove("active");
+  p[0].classList.add("active");
  }
 
 
+});
 
-})
+
+
+ 
