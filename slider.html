@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </head>
 <body>
-
-    <div class="slider-container">
+ 
+    <div class="slider-container" data-interval="5000">
 
         <button class="btn  prev"><i class="bi bi-arrow-left"></i> </button>
         <button class="btn  next"><i class="bi bi-arrow-right"></i></button>
+     <div>  
         <!-- item-1 -->
-        <div class="slider-item active" style="background-image: url('https://lh3.googleusercontent.com/proxy/NwsXOl9qQAvE1k4WUT7XsD44PfRyXfW9O6XxiNddq69185yZyz2VE7knsGwU456TQ2O__3jSr_Q0j4ra-Dt9lfGC9M2zJSV61PCcHiwqZhYUeFSSQ_Y14xA');">
+        <div class="slider-item active" style="background-image: url('https://www.wallpaperuse.com/wallp/14-144870_m.jpg');">
           <div class="carusel-body">
               <h1>სლაიდერის აღწერა 1</h1>
               <p>სლაიდერის სრული ტექსტი</p>
@@ -43,9 +44,35 @@
                     </div>
                   </div>
                   <!-- item / 3-->
+                </div>
 
-    </div>
-    
+                  <div class="switch">
+                      <span data-slide="0" class="active"></span>
+                      <span data-slide="1"></span>
+                      <span data-slide="2"></span>
+                  </div>
+               </div>
+
+        <ul class="portfolio">
+            <li data-class=".web" class="active">ვებ გვერდი</li>
+            <li data-class=".media" class="">სოც მედია</li>
+            <li data-class=".design" class="">გრაფიკული დიზაინი</li>
+            <li data-class=".seo" class="">seo</li>
+        </ul>
+
+        <div class="conts">
+            <div class="texts web active">  ვებ გვერდი  </div>
+            <div class="texts media"> სოცილაური მედია  </div>
+            <div class="texts design"> გრაფიკული დიზაინი  </div>
+            <div class="texts seo"> seo  </div>
+        </div>
+        <button class="btn btn-ss">სქროლ</button>
+   <div class="scrl">
+       <img src="img/slider.png" style="width: 300px; height: 400px;" alt="">
+       <img src="img/slider.png" style="width: 300px; height: 400px;" alt="">
+       <img src="img/slider.png" style="width: 300px; height: 400px;" alt="">
+       <img src="img/slider.png" style="width: 300px; height: 400px;" alt="">
+   </div>
 
     <script src="js/slider.js"></script>
 </body>

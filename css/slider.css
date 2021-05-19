@@ -76,3 +76,79 @@ h1{
     padding: 15px;
     border-radius: 7px;
 }
+
+.switch{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 7%;
+}
+
+.switch span{
+    display: inline-block;
+    width: 19px;
+    height: 20px;
+    background-color: #ffffff;
+}
+
+.switch span.active{
+  background-color: lime;
+}
+
+.switch span:hover{
+ cursor: pointer;
+}
+
+
+.portfolio{
+list-style: none;
+display: flex;
+justify-content: center;
+}
+
+.portfolio li{
+    display: inline-block;
+    padding: 7px;
+    background-color: chartreuse;
+    margin: 7px;
+    transition: all .6s;
+}
+
+.portfolio li.active{
+    transition: all .6s;
+  background-color: darkslategrey;
+}
+
+.portfolio li:hover{
+ cursor: pointer;
+}
+
+.conts{
+    width: 700px;
+    margin: 50px  auto 300px;
+}
+
+.texts{
+transform: scale(0);
+opacity: 0;
+ 
+pointer-events: none;
+transition: all .6s;
+background-color: darkslategrey;
+}
+
+.texts.active{
+transform: scale(1);
+opacity: 1;
+ 
+pointer-events: all;
+transition: all .6s;
+}
+
+
+.scrl{
+    width: 500px;
+    height: 250px;
+    overflow: scroll;
+    display: flex;
+}
