@@ -127,5 +127,28 @@ $(function () {
   })
     
   });
+
+
+  $(".btnserch").click(function ( ) { 
+    
+$(this).animate({
+  "width":"100%",
+  "height":"100%",
+  "border-radius":"0"
+}, 200);
+
+
+$(".btnserch i").css({
+  "color":"aqua",
+  "background-color":"#fff",
+});
+
+$(".btnserch input").animate({
+"opacity":1
+}, 100, function () {
+  $(".btnserch input").attr('placeholder', 'თქვენი ტექსტი აქ...')
+}).css("display", "block");
+    
+  });
  
 });
