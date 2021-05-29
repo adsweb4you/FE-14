@@ -162,3 +162,20 @@ if (activesw.nextElementSibling != null) {
     scrs.scrollBy(20,20);
  })    
  
+
+ 
+
+ let burger = document.querySelector(".burger");
+ let menu = document.querySelector('.burgermenu');
+
+ burger.addEventListener("click", function () {
+    menu.classList.toggle("active");
+    this.classList.toggle("clicked");
+    setTimeout(function () {
+        menu.classList.toggle("anim");
+    }, 500)
+
+ })
+
+
+ 
