@@ -121,4 +121,106 @@
     top: 7px;
   }
 
- 
+ .anim{
+   width: 350px;
+   height: 350px;
+   border-radius: 50px;
+   background-color: red;
+   transition: all .6s;
+ }
+
+ .anim.border{
+  border-radius: 20px;
+ }
+
+ .tabs{
+   display: flex;
+
+
+ }
+
+ .conts{
+   width: 750px;
+      margin: auto;
+ }
+
+ .steps{
+    padding: 15px;
+    width: 33.3333%;
+    text-align: center;
+  
+ }
+
+ .steps i {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  border-radius: 50px;
+  border: 3px solid brown;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+ }
+
+ .buttn{
+   margin-top: 30px;
+   display: flex;
+  justify-content: space-between;
+ }
+
+ .buttn button{
+  padding: 8px 15px;
+  background-color: brown;
+  border-radius: 2px;
+border: none;
+color: #fff;
+ }
+
+.showtab{
+  display: none;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+.showtab.active{
+  display: block;
+}
+
+.steps.active p{
+  color: brown;
+}
+
+.steps.active i{
+  background-color:brown;
+  color: #fff;
+}
+
+.prev{
+  opacity: 0;
+}
+
+.step-1.active i::after, .step-1.checked i::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  background-color: brown;
+  width: 179px;
+  left: 71px;
+}
+
+.step-3.active i::after, .step-3.checked i::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  background-color: brown;
+  width: 196px;
+  right: 53px;
+}

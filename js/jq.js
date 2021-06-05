@@ -85,70 +85,151 @@ $(function () {
 
 
 
-  $(".animate").click(function () { 
+//   $(".animate").click(function () { 
 
  
-    $(".animate").animate({
-      "width":"450px",
-      "height":"550px",
-      "border-radius":"3%"
+//     $(".animate").animate({
+//       "width":"450px",
+//       "height":"550px",
+//       "border-radius":"3%"
 
-    }, 600, function () {
-        $(".animate i").animate({
-          "opacity": "0",
-          "left": "-100%"
-        }, 1000, function () {
-           $("form").animate({
-             "opacity": "1",
+//     }, 600, function () {
+//         $(".animate i").animate({
+//           "opacity": "0",
+//           "left": "-100%"
+//         }, 1000, function () {
+//            $("form").animate({
+//              "opacity": "1",
              
 
-           });
-           $("form").css({"transform":"scale(1)",  "display": "block",  "pointer-events": "all"})
-        })
-    })
+//            });
+//            $("form").css({"transform":"scale(1)",  "display": "block",  "pointer-events": "all"})
+//         })
+//     })
     
-  });
+//   });
 
 
-  $(".btn").click(function () { 
+//   $(".btn").click(function () { 
    
-  $(".btn").animate({
-    // ობიექტი
-    "border-radius": "50px",
-  },
+//   $(".btn").animate({
+//     // ობიექტი
+//     "border-radius": "50px",
+//   },
  
-  600, //ანიმაციის დრო  
+//   600, //ანიმაციის დრო  
   
 
 
-  function () {
-      //ქოლბექ ფუნქცია (როდესაც ანიმაცია მთავრდება)
-      alert("ღილაკს ფერი შეეცვალა!")
-  })
+//   function () {
+//       //ქოლბექ ფუნქცია (როდესაც ანიმაცია მთავრდება)
+//       alert("ღილაკს ფერი შეეცვალა!")
+//   })
     
+//   });
+
+
+//   $(".btnserch").click(function ( ) { 
+    
+// $(this).animate({
+//   "width":"100%",
+//   "height":"100%",
+//   "border-radius":"0"
+// }, 200);
+
+
+// $(".btnserch i").css({
+//   "color":"aqua",
+//   "background-color":"#fff",
+// });
+
+// $(".btnserch input").animate({
+// "opacity":1
+// }, 100, function () {
+//   $(".btnserch input").attr('placeholder', 'თქვენი ტექსტი აქ...')
+// }).css("display", "block");
+    
+//   });
+
+
+  $(".sets").click(function (e) { 
+    e.preventDefault();
+    
+  // $(".setimg").attr('src', '')
+
+  $(".setimg").removeAttr('alt').removeClass('new class');
+
+ let val = $(".vals").val()
+
+ $(".vals").val("მნიშველობა")
+
+ console.log(val);
+
   });
 
 
-  $(".btnserch").click(function ( ) { 
-    
-$(this).animate({
-  "width":"100%",
-  "height":"100%",
-  "border-radius":"0"
-}, 200);
+ 
+
+  $(".btn").click(function () { 
+ 
+    $(".parents").empty();
+  });
 
 
-$(".btnserch i").css({
-  "color":"aqua",
-  "background-color":"#fff",
+ 
+
+  // $(".select").prevUntil("h3").css("background-color", "red");
+  // $(".select").nextUntil("h4").css("background-color", "green");
+ 
+  //$(".select").parents(".parents").addClass("bg-red");
+ 
+
+
+$(".parents p").click(function (e) { 
+  e.preventDefault();
+  $(".parents").prepend("<p>კონტენტი 1</p>");
+  //$(this).css("background-color", "red")
 });
 
-$(".btnserch input").animate({
-"opacity":1
-}, 100, function () {
-  $(".btnserch input").attr('placeholder', 'თქვენი ტექსტი აქ...')
-}).css("display", "block");
-    
-  });
+
+
+$(".next").click(function () { 
  
+ let checknext = $(".steps.active").next().length; 
+ if (checknext > 0) {
+   $(".steps.active").addClass("checked").removeClass("active").next().addClass("active");
+   $(".showtab.active").removeClass("active").next().addClass("active");
+   $(".prev").css("opacity", "1") 
+   $(".prev").prop('disabled', false)
+ }else{
+  $(".next").prop('disabled', true);
+ 
+ }
+ 
+});
+
+$(".prev").click(function () { 
+ 
+  let checknext = $(".steps.active").prev().length; 
+
+ 
+
+  if (checknext > 0) {
+    $(".steps.active").removeClass("active").prev().addClass("active");
+    $(".showtab.active").removeClass("active").prev().addClass("active");
+    $(".next").prop('disabled', false);
+  } 
+   
+
+  if($(".steps.active").hasClass('step-1')){
+     $(".prev").prop('disabled', true)
+     $(".prev").css("opacity", "0")
+     
+  }
+
+  
+ 
+  
+ });
+
 });
