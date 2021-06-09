@@ -194,6 +194,8 @@ $(".parents p").click(function (e) {
 
 
 $(".next").click(function () { 
+
+  $(this).data('value');
  
  let checknext = $(".steps.active").next().length; 
  if (checknext > 0) {
@@ -231,5 +233,52 @@ $(".prev").click(function () {
  
   
  });
+
+
+//  add cart
+
+$(".addcart").click(function () { 
+ 
+console.log($(this).parents(".card").outerWidth())
+
+
+ let price =  $(this).prev().children(".price").text();
+ let title =  $(this).parent().find(".card-title").text();
+ let img =    $(this).parent().prev().attr('src');
+
+$('.cart').prepend(`
+<ul class="list-inline">
+  <li class="list-inline-item"><img src="${img}" class="img-fluid cartimg"> </li>
+  <li class="list-inline-item">${title}</li>
+  <li class="list-inline-item">${price} ₾ </li>
+  <li class="list-inline-item text-danger"><i class="bi bi-trash"></i> </li>
+</ul>
+`)
+
+
+$(".empty").css("display", "block");
+ 
+});
+
+// delate 
+
+$(document).on("click", ".bi", function ( ) { 
+ 
+  $(this).parents(".list-inline").remove();
+  
+let check = $(".list-inline").length;
+
+  if (check == 0) {
+    $(".empty").css("display", "none")
+  }
+});
+
+
+// delate all
+$(document).on("click", ".empty", function ( ) { 
+ 
+  $(this).css("display", "none").parent().children("ul").remove();
+ 
+});
 
 });
