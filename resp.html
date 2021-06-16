@@ -1,1 +1,106 @@
-<h1>გამარჯობა ეს არის ჩემი პირველი ajax</h1>
+<style>
+
+.appends{
+    height: 0;
+    
+    overflow: hidden;
+}
+
+.lds-hourglass {
+    display: inline-block;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.lds-hourglass:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid #fff;
+    border-color: #3f51b5 transparent #3f51b5 transparent;
+    animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
+</style>
+
+<div class="container">
+    <div class="row appends">
+        
+    </div>
+</div>
+
+
+<div class="lds-hourglass"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+
+
+$.ajax({
+    type: "get",
+    url: "https://jsonplaceholder.typicode.com/photos",
+    // data: "data",
+    // dataType: "dataType",
+    success: function (response) {
+        
+        for (let i = 0; i < 100; i++) {
+            const element = response[i];
+            
+
+            $(".appends").prepend(`
+            <div class="col-md-4 mb-3">
+            <div class="card">
+<img src="${element.url}" class="card-img-top img-fluid" alt="...">
+<div class="card-body">
+<h5 class="card-title">${element.title}</h5>
+
+<a href="" data-post="${element.id}" class="btn btn-primary detalsview">სრულად ნახვა</a>
+</div>
+</div>
+            </div>
+            `) 
+   
+        }
+        $(".appends").animate({
+            "height":"100vh",
+        }, 1500, function(){
+            $(".appends").css("height", "100%");
+        })
+        $(".lds-hourglass").fadeOut(1000)
+    }
+});
+
+
+$(document).on("click", ".detalsview",function (e) { 
+    e.preventDefault();
+
+    let postid = $(this).data('post');
+
+     localStorage.setItem('postid', postid);
+
+
+     window.location.href = "detals.html"
+    
+});
+
+</script>

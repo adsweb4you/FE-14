@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="plugin/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="plugin/assets/owl.theme.default.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+ 
+
+</head>
+<body>
+
+    <div class="owl-carousel owl-theme">
+        <div class="item" data-hash="zero1">
+            <div class="card">
+                <img src="img/slider.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title 1</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+        </div>
+        <div class="item" data-hash="zero2">
+            <div class="card">
+                <img src="img/slider.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title 2</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+        </div>
+        <div class="item" data-hash="zero3">
+            <div class="card">
+                <img src="img/slider.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title 3</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+        </div>
+        <div class="item " data-hash="zero4">
+            <div class="card">
+                <img src="img/slider.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title 4</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+        </div>
+ 
+    </div>
+
+    <select class="js-example-templating" name="state">
+        <option value="bird">ჩიტი</option>
+        <option value="cat">კატა</option>
+        <option value="dog">ძაღლი</option>
+        <option value="fish">თევზი</option>
+        <option value="rabb">კურდღელი</option>
+ 
+      </select>
+
+      
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="plugin/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script>
+
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:50,
+    nav:false,
+    URLhashListener:true,
+    autoplayHoverPause:true,
+    startPosition: 'URLHash',
+    responsive:{
+        0:{
+            items:2
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:2
+        }
+    }
+})
+
+
+
+$(document).ready(function() {
+
+    function formatState (state) {
+  if (!state.id) {
+    return state.text;
+  }
+  var baseUrl = "img";
+  var $state = $(
+    '<span><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" width="30" /> ' + state.text + '</span>'
+  );
+  return $state;
+};
+
+$(".js-example-templating").select2({
+  templateResult: formatState
+});
+
+});
+    </script>
+</body>
+</html>

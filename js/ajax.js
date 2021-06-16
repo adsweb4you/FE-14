@@ -16,9 +16,9 @@ $(".nav-link").click(function (e) {
     e.preventDefault();
  $.ajax({
     type:"GET",
-    url:"resp.html",
-    data:{"name":"nikoloz"},
-    dataType:"text",
+    url: $(this).attr('href'),
+    // data:{"name":"nikoloz"},
+    // dataType:"text",
     // success:function (resp) {
     //   $(".htms").html(resp);
     // },
@@ -37,6 +37,19 @@ $(".nav-link").click(function (e) {
  
 
 
+// $("p").css("color", "red");
 
+// $("p").each( function (index, element) { 
+    
+//    // console.log(index);
+
+//      if (element.innerText == "კონტენტ 2") {
+//         element.style.color = "red"
+//      }else{
+//         element.style.color = "green"
+//      }
+// });
+
+ 
 
 });

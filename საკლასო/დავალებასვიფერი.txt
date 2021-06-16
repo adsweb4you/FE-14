@@ -1,0 +1,29 @@
+1) შემოქვაქვს   ფლაგინი
+
+   swiper.js შემდეგი კონფიგურაციით 
+
+    -- Autoplay
+    -- Responsive breakpoints
+    -- Infinite loop with slides per group
+    -- Pagination custom
+    -- Lazy load images
+
+
+2) json fake api (https://jsonplaceholder.typicode.com/) გამოყენებით გავაგზავნოთ request დაბრუნებული რესფონსი გამოვიტანოთ  html 
+ასევე გავაკეთოთ დაბრუნებული პოსტის სრულად ნახვის გვერდი (თუ შეძლებთ)
+
+
+=== 
+
+რაც არ ამიხსნია (არასავალდებულო)
+
+3)   Lightbox შეგიძლიათ შემოიტანოთ ნებისმიერი (https://fslightbox.com/)
+ 
+4)   select2.js   (https://select2.org/)
+
+datapiker (https://bootstrap-datepicker.readthedocs.io/en/latest/)
+
+გამადიდებელი (https://sularome.github.io/Zoomple/)
+
+
+   

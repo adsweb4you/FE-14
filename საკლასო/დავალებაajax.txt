@@ -11,3 +11,6 @@
 
 4) მენიუს ლინკზე დაჭერის დროს უნდა იგზავნებოდეს ajax request დაბრუნებული html რესფონსი უნდა გამოვიტანოთ
 home.html ში
+
+
+5) json fake api (https://jsonplaceholder.typicode.com/) გამოყენებით გავაგზავნოთ request დაბრუნებული რესფონსი გამოვიტანოთ console.log   
