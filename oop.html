@@ -5,30 +5,140 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+
+*{
+    box-sizing: border-box;
+}
+
+        form{
+            width: 440px;
+            margin: auto;
+        }
+
+#colors{
+    width: 1000px;
+    margin: auto;
+    height: 500px; 
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#colors div{
+ margin: 7px;
+  width: 23%;
+  height: 25%;
+  padding: 15px;
+  overflow: hidden;
+  background-color: aquamarine;
+}
+
+#colors div span{
+ 
+ width: 100%;
+ height: 100%;
+ 
+ display: block;
+ 
+}
+
+    </style>
 </head>
 <body>
     
-<div class="demo">
+<div class="demo"  >
+
 
 </div>
 
+<form action="" class="contform">
 
-    <script src="js/class.js"></script>
+    <div id="output"></div>
 
-    <script>
+    <input type="text" id="name1">
+    <input type="text" id="name2">
+    <input type="text" id="name3">
 
-// let slider = new Slider({
-//     color:"green",
-//     width:"250px",
-//     text:"ჩემი პირველი კლასი",
-//     css:{
-//          "color":"white",
-//          "borderRadius":"50px",
-//          "border":"7px solid red",
-//     },
-// })
 
-// slider.init();
+    <button type="submit">შეცვლა</button>
+
+</form>
+
+<div id="colors">
+
+</div>
+
+<button class="" onclick="rev(1)">შეცვლა</button>
+
+    <script src="js/class.js" type="module"></script>
+
+
+<script>
+
+    function rev(ran){
+    let cols;
+    
+            for(let t=0;t<=3;t++){
+   
+           cols +=  ' #'+Math.floor(Math.random()*16777215).toString(16) ; 
+            }
+     
+        let nwc =     cols.split(' ')
+
+    let color = [
+     "red",
+ 	 "green",
+ 	 "blue",
+     "black"
+ 
+      ]
+
+    let last =   nwc.splice(1,4)
+      
+       ran  == 1 ? color.splice(0, 0) : ''
+       ran  == 1 ? color = last : ''
+     
+ 
+
+      colors.innerHTML = "" 
+
+     let l = 0;
+     let t = 0;
+     let k = 0;
+ 
+
+for (let i = 0; i < 16; i++) {
+    let div = document.createElement('div');
+    
+     if(i  <  4 ){ 
+        div.style.backgroundColor =  color[i];
+        
+    }else if(i  >=  4 && i  <  8){
+          l == 0   ? color.reverse() : '';
+        div.style.backgroundColor =  color[l];
+        l++
+      
+    }else if(i  >=  8 && i  <  12){
+        t == 0   ? color.reverse() : '';
+        div.style.backgroundColor =  color[t];
+        t++
+    }
+
+    else if(i  >=  12 && i  <=  16){
+        k == 0   ? color.reverse() : '';
+  div.style.backgroundColor =  color[k];
+  k++
+}
+ 
+    colors.appendChild(div);
+ 
+
+    
+}
+}
+
+rev();
 
     </script>
 

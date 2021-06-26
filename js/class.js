@@ -1,3 +1,6 @@
+import  {getpost}  from './module/formvalidate.js'
+
+
 class User {
 
     constructor(names, email, role, age){
@@ -67,4 +70,88 @@ let slider = new Slider({
     },
 })
 
+
 slider.init();
+
+
+let ts = {
+    name1:"sad"
+}
+
+let test1 = "color";
+
+console.log(document.querySelector(".demo").style[test1])
+
+
+
+class Animals {
+    constructor(name){
+      this.name = name;
+    }
+
+    eat(){
+      console.log('ჩემი ძაღლი იყეფება');
+    }
+
+
+    get retname(){
+        return this.name;
+    }
+
+    set retname(y){
+      this.name  = y;
+    }
+
+}
+
+
+class Dog extends Animals{
+   
+    constructor(name){
+        super(name);
+    }
+
+    
+    eat(){
+        super.eat();
+        console.log('ჩემი ძაღლი კნავის');
+      }
+
+}
+
+
+let dogs = new Dog("ნაგაზი");
+
+
+dogs.retname = "ჩიხუახუა";
+
+
+ console.log(dogs.retname);
+
+
+ let form = document.querySelector('.contform');
+
+ form.addEventListener("submit", function (e) {
+     e.preventDefault();
+
+    //  let name1 = document.querySelector('#name1');
+    //  let name2 = document.querySelector('#name2');
+    //  let name3 = document.querySelector('#name3');
+      let out = document.querySelector('#output');
+    //  validate(name1,name2, name3, out)
+
+    getpost('https://jsonplaceholder.typicode.com/posts', out );
+    getpost('https://jsonplaceholder.typicode.com/users/1/albums', out );
+
+   })
+
+
+
+ 
+   let minejson = ["1", "3" ,"345t" ,  "54", "65y7"];
+  
+     let myobj = JSON.stringify(minejson);
+
+     let minejs = JSON.parse(myobj);
+
+   console.log(minejs)
