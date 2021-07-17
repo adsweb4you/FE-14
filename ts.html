@@ -8,14 +8,16 @@
 </head>
 <body>
 
-    <form action="" id="forms">
+    <form action="" id="forms" onsubmit="checklogin(event)">
         <div id="outs"></div>
-        <input type="number" id="val1">
-        <input type="number" id="val2">
-       <button type="submit">გაგზავნა</button>
+        <label for="">username:</label> <br>
+        <input type="text" id="user"> <br>
+        <label for="">password:</label> <br>
+        <input type="password" id="pass"> <br>
+       <button type="submit">შესვლა</button>
     </form>
 
     
-    <script src="ts/mine.js"></script>
+    <script src="ts/task.js"></script>
 </body>
 </html>
