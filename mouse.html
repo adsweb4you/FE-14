@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/sl.css">
+</head>
+<body>
+
+    <div class="container">
+        <img src="https://cash-f.squarecdn.com/ember/8f78e7f939dbda67cbe88e48f8e472da6c4e6f09/assets/images/marketing/home-stimulus/intro-phone.png" alt="">
+    </div>
+    
+    <script>
+
+let div  = document.querySelector('.container');
+let img  = document.querySelector('img');
+div.addEventListener("mousemove", function(e){
+
+ let x = e.clientX / 50;
+ let y = e.clientY / 50;
+ let z = (e.clientY  - e.clientX) / 50 +"deg";
+
+ let l = x + "," + y + "," + " -33," + z ;
+ let s = x+"%" + "," + y+"%";
+ console.log(l);
+
+ img.style.transform = "rotate3d("+l+")" + "translate("+s+")"
+ 
+})
+
+    </script>
+</body>
+</html>

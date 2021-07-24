@@ -1,0 +1,14 @@
+.container{
+    padding-top: 80px;
+    width: 450px;
+    margin: auto;
+}
+
+.container img{
+  object-fit: contain;
+  max-width: 100%;
+ 
+  /* transform: rotate3d(-35, 15, -3, 
+  26deg
+  ); */
+}
